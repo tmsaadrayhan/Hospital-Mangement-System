@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Member List</title>
+<title>Doctors List</title>
 
 <th:block th:replace="fragments/styles :: common"></th:block>
 <th:block th:replace="fragments/styles :: datatable"></th:block>
@@ -25,14 +25,14 @@
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="x_panel">
 						<div class="x_title">
-							<h2>List of Members</h2>
+							<h2>List of Doctors</h2>
 							<div class="clearfix"></div>
 						</div>
 						<div class="x_content">
 						
 							<div class="alert alert-success alert-dismissible fade in" role="alert" th:if="${memberInUse}">
                    			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-	                    	<span>Member is in use, cannot be deleted.</span>
+	                    	<span>Doctors is in use, cannot be deleted.</span>
 	                    	</div>
 	                    	
 							<table id="datatable"
