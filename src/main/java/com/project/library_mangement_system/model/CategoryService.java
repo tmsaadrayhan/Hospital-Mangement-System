@@ -13,6 +13,10 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    public CategoryService(CategoryRepository categoryRepository) {
+        this.categoryRepository=categoryRepository;
+    }
+
     public Long getTotalCount() {
         return categoryRepository.count();
     }

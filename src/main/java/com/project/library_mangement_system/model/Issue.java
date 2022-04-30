@@ -40,6 +40,14 @@ public class Issue implements Serializable {
     @OneToMany(mappedBy = "issue", cascade = CascadeType.ALL)
     private List<IssuedBook> issuedBooks;
 
+    public Issue(Date date) {
+        this.issueDate=date;
+    }
+
+    public Issue() {
+
+    }
+
     public Long getId() {
         return id;
     }

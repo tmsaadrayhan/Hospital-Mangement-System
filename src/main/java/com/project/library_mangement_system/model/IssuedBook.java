@@ -31,6 +31,15 @@ public class IssuedBook implements Serializable {
     @Column(name = "returned")
     private Integer returned;
 
+    public IssuedBook(Book book, Issue issue) {
+        this.book=book;
+        this.issue=issue;
+    }
+
+    public IssuedBook() {
+
+    }
+
     public Long getId() {
         return id;
     }

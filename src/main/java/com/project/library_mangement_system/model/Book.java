@@ -62,6 +62,17 @@ public class Book implements Serializable {
     @NotNull(message = "*Please select category")
     private Category category;
 
+    public Book(Category category, String tittle, String tag, String authors) {
+        this.category=category;
+        this.title=tittle;
+        this.tag=tag;
+        this.authors=authors;
+    }
+
+    public Book() {
+
+    }
+
     public Long getId() {
         return id;
     }

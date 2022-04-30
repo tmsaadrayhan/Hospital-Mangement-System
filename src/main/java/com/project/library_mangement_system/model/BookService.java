@@ -14,6 +14,10 @@ public class BookService {
     @Autowired
     private IssuedBookService issuedBookService;
 
+    public BookService(BookRepository bookRepository) {
+        this.bookRepository=bookRepository;
+    }
+
     public Long getTotalCount() {
         return bookRepository.count();
     }

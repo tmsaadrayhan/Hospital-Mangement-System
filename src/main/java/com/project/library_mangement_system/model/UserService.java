@@ -15,6 +15,10 @@ public class UserService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+    public UserService(UserRepository userRepository) {
+        this.userRepository=userRepository;
+    }
+
     public List<User> getAllUsers() {
         return userRepository.findAllByOrderByDisplayNameAsc();
     }
@@ -32,10 +36,10 @@ public class UserService {
     }
 
     public User addNew(User user) {
-        user.setPassword( passwordEncoder.encode(user.getPassword()) );
-        user.setCreatedDate( new Date() );
-        user.setLastModifiedDate( user.getCreatedDate() );
-        user.setActive(1);
+        user.setPassword( passwordEncoder.encode(user.getPassword()) ); //Comment
+        user.setCreatedDate( new Date() ); //Comment
+        user.setLastModifiedDate( user.getCreatedDate() ); //Comment
+        user.setActive(1); //Comment
         return userRepository.save(user);
     }
 

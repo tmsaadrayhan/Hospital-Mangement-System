@@ -12,6 +12,10 @@ public class IssuedBookService {
     @Autowired
     private IssuedBookRepository issuedBookRepository;
 
+    public IssuedBookService(IssuedBookRepository issuedBookRepository) {
+        this.issuedBookRepository=issuedBookRepository;
+    }
+
     public List<IssuedBook> getAll() {
         return issuedBookRepository.findAll();
     }

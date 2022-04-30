@@ -14,6 +14,10 @@ public class MemberService {
     @Autowired
     private IssueService issueService;
 
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository=memberRepository;
+    }
+
     public Long getTotalCount() {
         return memberRepository.count();
     }

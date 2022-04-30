@@ -41,6 +41,15 @@ public class Category implements Serializable {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> books;
 
+    public Category(String name, String shortName) {
+        this.name=name;
+        this.shortName=shortName;
+    }
+
+    public Category() {
+
+    }
+
     public Long getId() {
         return id;
     }

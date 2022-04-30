@@ -52,6 +52,18 @@ public class Member implements Serializable {
     @Column(name = "email")
     private String email;
 
+    public Member(String type, String firstName, String middleName, String male, Date dateOfBirth) {
+        this.type=type;
+        this.firstName=firstName;
+        this.middleName=middleName;
+        this.gender=male;
+        this.dateOfBirth=dateOfBirth;
+    }
+
+    public Member() {
+
+    }
+
     public Long getId() {
         return id;
     }

@@ -12,6 +12,10 @@ public class IssueService {
     @Autowired
     private IssueRepository issueRepository;
 
+    public IssueService(IssueRepository issueRepository) {
+        this.issueRepository=issueRepository;
+    }
+
     public List<Issue> getAll() {
         return issueRepository.findAll();
     }
